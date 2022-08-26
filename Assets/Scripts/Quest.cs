@@ -1,8 +1,16 @@
 ﻿using UnityEngine;
-public class Quest
+using System.Collections.Generic;
+
+[System.Serializable]
+public class QuestList
 {
-    
-    public string Description { get; set; }
-    public GameObject Marker  { get; set; }
-    public string PrefabName { get; set; }
+    public List<Quest> Quests;
+
+    public class Quest
+    {
+        public string Description { get; set; }
+        /*public GameObject Marker { get; set; }*/
+        public string PrefabName { get; set; }
+    }
+
 }
